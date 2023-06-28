@@ -16,12 +16,19 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+::-webkit-scrollbar {
+  width: 0.5em; 
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255)
+ }  
+
+ ::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
 }
+
+
+::-webkit-scrollbar-thumb {
+  width: 0.5em; /* Adjust the width of the scrollbar as needed */
+  /* border-radius: 20px; */
+  background-color: rgb(140, 131, 233)/* Adjust the background color of the scrollbar track */
+ } 
