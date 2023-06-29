@@ -10,7 +10,7 @@ import { useState } from 'react';
 import menu from "../assets/menu.svg"
 import close from "../assets/close.svg"
 import Image from 'next/image'
-// import img1 from '../assets/wave.png'
+import img1 from '../assets/wave.png'
 
 const SideNavbar =({children}) => {
 
@@ -32,7 +32,7 @@ const SideNavbar =({children}) => {
       <div className="flex">
         <div className={` w-20 p-4 h-screen bg-white z-20  lg:left-0 fixed top-0   items-center justify-center peer-focus:left-0 peer:transition ease-out delay-150 duration-200 ${navCollapse ? "max:sm:visible" : "max-sm:hidden"} `}>
           
-
+          <div className="flex flex-col justify-between min-h-screen"> 
             <div className='flex flex-col items-center justify-center '>
                 <Link href="/">
                     <div className='bg-indigo-600 text-white p-3 rounded-lg inline-block '>
@@ -69,6 +69,20 @@ const SideNavbar =({children}) => {
                 </Link>
                 
             </div>
+
+            {/* <div className="absolute inline-flex sm:hidden items-center peer justify-center rounded-md p-2 text-black w-10 "> */}
+
+                <Image 
+                    src={img1}
+                    alt="menu" 
+                    className="rounded-full mb-8 cursor-pointer"
+                    width={50}
+                    height={50}
+                />
+
+            {/* </div> */}
+
+          </div>
           </div>
         <main className='sm:ml-20 w-full bg-gray-100 min-h-screen'>{children}</main>
       </div>  
